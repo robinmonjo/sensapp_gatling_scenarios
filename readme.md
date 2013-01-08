@@ -1,4 +1,4 @@
-# This folder contains various files used to test the current performances of SensApp, and of its future architectures.
+### This folder contains various files used to test the current performances of SensApp, and of its future architectures.
 
 * bench.sh : Launches a Gatling test with preset parameters
 * testbench_sensors.sh : Launches multiple Gatling tests with an increasing number of sensors
