@@ -13,4 +13,4 @@
 * scenarioGet.scala : body of the data get request Gatling test scenario
 
 * Helpers.scala : contains functions that generate random data or sensors
-* Target.scala : contains the address of the server hosting SensApp
+* Target.scala : contains the address of the server hosting SensApp 
