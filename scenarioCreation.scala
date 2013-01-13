@@ -17,9 +17,13 @@ object scenarioCreation {
 	      .setAttribute("stamp", (System.currentTimeMillis / 1000)) 
         }
         .exec {  // 1. Creating the sensors
-        http("Creating the sensors")
+        http("Creating the sensor")
           .post("http://"+Target.serverName+"/registry/sensors")
           .headers(headers)
           .body("{ \"id\": \"${sensorId}\", \"descr\": \"Capteur de test\", \"schema\": { \"backend\": \"raw\", \"template\": \"Numerical\"} }")
         }.pause(100 milliseconds, 200 milliseconds)
+	.exec {
+	http("Deleting the sensor")
+		.delete("http://"+Target.serverName+"/registry/sensors/${sensorId}")
+	}
 }
