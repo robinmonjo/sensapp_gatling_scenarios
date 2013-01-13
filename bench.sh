@@ -75,7 +75,11 @@ do
              RAMPUP=$OPTARG
 	     ;;
 	 f)
-	     FOLDER=$OPTARG
+	     # Répertoire des fichiers test en chemin absolu
+	     # Création de ce répertoire
+	     mkdir "../results/$OPTARG"
+	     # Récupération du chemin
+	     FOLDER=$(cd "../results/$OPTARG"; pwd)
 	     ;;
          ?)
              usage
@@ -102,7 +106,7 @@ fi
 
 if [[ ! -z $SIMULATION ]]; then
 	if [[ ! -z $FOLDER ]]; then
-		JAVA_OPTS="$JAVA_OPTS" ./gatling.sh -s $SIMULATION -ro $FOLDER
+		JAVA_OPTS="$JAVA_OPTS" ./gatling.sh -s $SIMULATION -rf $FOLDER
 	else
 		JAVA_OPTS="$JAVA_OPTS" ./gatling.sh -s $SIMULATION
 	fi
