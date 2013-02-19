@@ -19,7 +19,7 @@ object scenarioGet {
   	  }
   	  .exec{
 		  http("Getting random data")
-		    .get("http://"+Target.serverName+"/databases/raw/data/${sensorId}")
+		    .get("http://"+TargetDatabase.serverName+"/databases/raw/data/${sensorId}")
 		  	.headers(headers)
 	}			
 }

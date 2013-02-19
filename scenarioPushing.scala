@@ -27,7 +27,7 @@ object scenarTest {
               					 	    			  session.getAttribute("stamp").asInstanceOf[Long],taille))
             }.exec {
               http("Pushing data from sensors")
-                .put("http://"+Target.serverName+"/dispatch")
+                .put("http://"+TargetDispatcher.serverName+"/dispatch")
               	.headers(headers).body("${data}")
             }.exec { (session: Session) => 
               session.setAttribute("stamp", session.getAttribute("stamp").asInstanceOf[Long] + 1)

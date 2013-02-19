@@ -22,6 +22,18 @@
  */
 package sensapp.continu
 
-object Target {
+object TargetRegistry {
+  var serverName = "ec2-54-247-9-43.eu-west-1.compute.amazonaws.com/sensapp"
+}
+
+object TargetDispatcher {
+  var serverName = "ec2-54-247-9-43.eu-west-1.compute.amazonaws.com/sensapp"
+}
+
+object TargetDatabase {
+  var serverName = "ec2-176-34-207-125.eu-west-1.compute.amazonaws.com/sensapp"
+}
+
+object TargetNotifier {
   var serverName = "ec2-54-247-9-43.eu-west-1.compute.amazonaws.com/sensapp"
 }

@@ -77,7 +77,7 @@ do
 	 f)
 	     # Répertoire des fichiers test en chemin absolu
 	     # Création de ce répertoire
-	     mkdir "../results/$OPTARG"
+	     mkdir -p "../results/$OPTARG"
 	     # Récupération du chemin
 	     FOLDER=$(cd "../results/$OPTARG"; pwd)
 	     ;;
